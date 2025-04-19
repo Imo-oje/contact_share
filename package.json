@@ -1,0 +1,42 @@
+{
+  "name": "contact_share",
+  "version": "1.0.0",
+  "main": "index.ts",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "ts-node-dev --files src/index.ts index.d.ts",
+    "build": "tsc && cp ./package.json ./dist",
+    "prisma:generate": "npx prisma generate --schema=src/prisma/schema.prisma",
+    "prisma:migrate": "npx prisma migrate dev --schema=src/prisma/schema.prisma"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "dependencies": {
+    "@prisma/client": "^6.6.0",
+    "connect-flash": "^0.1.1",
+    "dotenv": "^16.5.0",
+    "ejs": "^3.1.10",
+    "express": "^5.1.0",
+    "express-ejs-layouts": "^2.5.1",
+    "express-session": "^1.18.1",
+    "morgan": "^1.10.0",
+    "zod": "^3.24.2"
+  },
+  "devDependencies": {
+    "@types/connect-flash": "^0.0.40",
+    "@types/connect-livereload": "^0.6.3",
+    "@types/express": "^5.0.1",
+    "@types/express-ejs-layouts": "^2.5.4",
+    "@types/express-session": "^1.18.1",
+    "@types/livereload": "^0.9.5",
+    "@types/morgan": "^1.9.9",
+    "@types/node": "^22.14.1",
+    "connect-livereload": "^0.6.1",
+    "livereload": "^0.9.3",
+    "prisma": "^6.6.0",
+    "ts-node-dev": "^2.0.0",
+    "typescript": "^5.8.3"
+  }
+}

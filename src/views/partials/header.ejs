@@ -1,0 +1,45 @@
+<header class="flex text-white justify-between items-center bg-blue-600 p-4">
+  <h1 class="font-bold text-2xl">Logo</h1>
+  <!-- menu icon -->
+  <input
+    type="checkbox"
+    name="toggleMenu"
+    id="toggleMenu"
+    class="toggle_menu hidden"
+  />
+  <div
+    class="mobile_nav glass_bg hidden p-8 fixed inset-0 top-16 h-[calc(100vh-4rem)] w-4/5 z-50 flex flex-col"
+  >
+    <ul class="flex flex-col justify-center items-center h-full gap-14">
+      <li class="text-white mb-4"><a href="/about">About</a></li>
+      <li class="text-white mb-4"><a href="/blog">Blog</a></li>
+      <li class="text-white mb-4"><a href="/contact">Contact</a></li>
+      <li>
+        <a class="text-white mb-4" href="/terms-of-service">Terms of service</a>
+      </li>
+    </ul>
+  </div>
+
+  <label for="toggleMenu"
+    ><div class="md:hidden cursor-pointer">
+      <svg
+        xmlns="http://www.w3.org/2000/svg"
+        width="20"
+        height="20"
+        fill="currentColor"
+        class="bi bi-list"
+        viewBox="0 0 16 16"
+      >
+        <path
+          fill-rule="evenodd"
+          d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+        />
+      </svg></div
+  ></label>
+  <ul class="hidden md:flex space-x-8 px-4 flex-1 justify-center text-xl">
+    <li><a href="/about">About</a></li>
+    <li><a href="/blog">Blog</a></li>
+    <li><a href="/help">Help</a></li>
+    <li><a href="/terms-of-service">Terms of service</a></li>
+  </ul>
+</header>
