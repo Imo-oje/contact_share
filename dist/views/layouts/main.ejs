@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <title><%= title || 'My App' %></title>
+    <style type="text/tailwindcss">
+      @theme {
+        --color-clifford: #da373d;
+      }
+
+      body {
+        background: #92bbf3;
+        background: radial-gradient(
+          circle farthest-side at center center,
+          #92bbf3 0%,
+          #42bbf3 80%
+        );
+        background: -webkit-radial-gradient(
+          circle farthest-side at center center,
+          #92bbf3 0%,
+          #42bbf3 80%
+        );
+        background: -moz-radial-gradient(
+          circle farthest-side at center center,
+          #92bbf3 0%,
+          #42bbf3 80%
+        );
+        scroll-behavior: smooth;
+      }
+
+      .toggle_menu:checked ~ div.mobile_nav {
+        display: flex;
+        height: calc(100vh-4rem);
+      }
+
+      .glass_bg {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(10px);
+        border-radius: 10px;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+      }
+    </style>
+  </head>
+  <body class="bg-yellow-100">
+    <%- include('../partials/header') %> <%- body %>
+    <script src="http://localhost:35729/livereload.js"></script>
+  </body>
+</html>

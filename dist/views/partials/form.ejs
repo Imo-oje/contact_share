@@ -1,0 +1,41 @@
+<form
+  action="/submit-form"
+  method="post"
+  id="addContactForm"
+  class="glass_bg py-4"
+>
+  <legend class="text-center text-2xl font-bold">
+    Enter your details below
+  </legend>
+  <!-- Error -->
+  <% if (typeof success !== "undefined" && success.length > 0) { %>
+  <div class="alert alert-success"><%= success %></div>
+  <% } %> <% if (typeof error !== "undefined" && error.length > 0) { %>
+  <div class="alert alert-danger text-red-400 py-4 font-semibold text-center">
+    <%= error %>
+  </div>
+  <% } %>
+  <!-- ==== -->
+
+  <div class="flex flex-col items-center gap-4 mt-8">
+    <input
+      class="w-[90%] p-2 border rounded"
+      type="text"
+      name="phoneNumber"
+      id="phone_number"
+      placeholder="Enter your phone number"
+    />
+    <input
+      class="w-[90%] p-2 border rounded"
+      type="text"
+      name="name"
+      placeholder="Enter your name"
+    />
+    <button
+      class="bg-blue-600 py-3 font-bold rounded w-[90%] cursor-pointer"
+      type="submit"
+    >
+      Submit
+    </button>
+  </div>
+</form>

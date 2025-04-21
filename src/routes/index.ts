@@ -5,7 +5,7 @@ import { z } from "zod";
 const indexRouter = Router();
 const prisma = new PrismaClient({
   datasources: {
-    db: { url: process.env.DATABASE_URL },
+    db: { url: `${process.env.DATABASE_URL}` },
   },
 });
 
